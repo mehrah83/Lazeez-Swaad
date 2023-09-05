@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+a,button,img,input,select{
+    display: inline-block;
+}
+
+h2{
+    font-size: 3.5rem;
+}
+
+h3{
+    font-size: 2.5rem;
+}
+
+
+
+/*** Resusable Section Start  ***/
+.container{
+max-width: 100rem;
+margin: 2rem auto;
+}
+.btn{
+    color: #000;
+    background-color: #bfb6b6;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear 0s;
+    -webkit-transition: all 0.4s linear 0s;
+    -o-transition: all 0.4s linear 0s;
+}
+
+
+
+.grid{
+    display: grid;
+}
+
+.grid-two-column{
+    grid-template-columns: repeat(2,1fr);
+}
+
+
+.grid-three-column{
+    grid-template-columns: repeat(3,1fr);
+}
+
+
+.grid-four-column{
+    grid-template-columns: repeat(4,1fr);
+}
+
+
+.grid-five-column{
+    grid-template-columns: repeat(5,1fr);
+}
+/*** Resusable Section End    ***/
+
+/*** Header Section Styling Start ***/
+.header{
+   background-color: rgb(205 193 45);
+    color: white;
+    position: relative;
+    height: 7rem;
+    padding: 1rem 4rem;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo h4{
+font-size: 1.5rem;
+    color: brown;
+    font-weight: 900;
+}
+
+.date h3{
+    font-size: 2.5rem;
+}
+
+.logo img{
+    max-width: 5rem;
+}
+
+.searchBar input{
+    border: none;
+    outline: none;
+    padding: 1rem 3rem;
+    color: black;
+    font-size: 1.2rem;
+    width: 20vw;
+}
+/*** Header Section Styling End   ***/
+
+
+
+/*** Cateogry Menu Section Styling Start ***/
+.category{
+    position: relative;
+}
+
+.category h2{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.category .btn{
+    margin: 1rem;
+    transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear 0s;
+    -webkit-transition: all 0.4s linear 0s;
+    -o-transition: all 0.4s linear 0s;
+}
+
+
+
+.text-white {
+    --tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.bg-green-500 {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(34 197 94 / var(--tw-bg-opacity)) !important;
+}
+
+.category div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*** Cateogry Menu Section Styling End   ***/
+
+
+
+/*** Food Card Section Styling Start ***/
+.foodCard .grid-three-column{
+    row-gap: 3rem;
+}
+
+.card{
+    max-width: 20vw;
+    height: 100%;
+    border: 0.1rem solid grey;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 5px 10px #888888;
+}
+
+
+.card img{
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+}
+
+.card img:hover, .card img:active{
+    transform: scale(0.8);
+    cursor: grab;
+}
+
+.card-desc{
+    max-width: 30rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.3rem;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.3rem;
+}
+
+.card-name{
+    font-size: 1.5rem;
+}
+.card-price{
+    font-size: 1.2rem;
+    color: #13d513;
+    font-weight: 700;
+}
+
+.another-info{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.another-info .btn{
+    background-color: #13d513;
+    color: white;
+    border-radius: 1rem;
+}
+
+.card-rating{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.card-rating i{
+    color: #e7e723;
+}
+/*** Food Card Section Styling End   ***/
+
+
+
+/*** Cart Section Styling Start ***/
+.cart{
+    background-color: #e9e0e0;
+}
+
+.cart div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+}
+
+.cart .sum{
+    padding: 0rem 1rem;
+}
+
+.cart .sum{
+    font-size: 1.1rem;
+}
+
+.cart .myOrder{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cart .closeIcon{
+    color: red;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.cart .btn{
+    background-color: #13d513;
+    font-weight: 700;
+    border-radius: 1rem;
+}
+
+.shoppingCartIcon{
+    font-size: 2.5rem;
+    cursor: pointer;
+    position: fixed;
+    right: 3rem;
+    bottom: 1rem;
+    background-color: #bfb6b6;
+    border-radius: 50%;
+    padding: 1rem;
+}
+.emptyCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+.cart .totalPrice{
+    color: #13d513;
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+/*** Cart Section Styling End   ***/
+
+
+
+/*** Item-Card Section Styling Start ***/
+.itemCard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 17vw;
+    padding: 0rem 0.5rem;
+    margin: 1rem auto;
+    position: relative;
+}
+
+.deleteIcon{
+    color: black;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.2rem;
+    cursor: pointer;
+}
+
+.itemCard img{
+    width: 5rem;
+    height: 5rem;
+}
+
+.itemQuantity{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.itemCard .price{
+    text-align: center;
+    color: #13d513;
+    font-weight: 700;
+    font-size: 1.1rem;   
+}
+
+.quantity{
+    font-size: 1.2rem !important;
+}
+
+.minusIcon, .plusIcon{
+border: 0.1rem solid gray;
+color: black;
+cursor: pointer;
+}
+
+/*** Item-Card Section Styling End   ***/
+
+
+
+
+
+.errorPage{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    justify-content: center;
+}
+
